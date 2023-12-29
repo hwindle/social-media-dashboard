@@ -36,9 +36,7 @@
 
 
 body {
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  margin: 2rem;
   min-height: 100vh;
   color: white;
   background-color: var(--very-dark-blue-bg);
@@ -50,11 +48,5 @@ body {
   :root {
     color: var(--dark-grey-text);
     background-color: var(--v-light-blue);
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
   }
 }

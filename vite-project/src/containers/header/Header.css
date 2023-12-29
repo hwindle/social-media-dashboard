@@ -1,0 +1,34 @@
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+span.horizontal-line {
+  display: block;
+  margin: 1rem 0;
+  width: 100%;
+  height: 1px;
+}
+
+/* dark mode theme */
+body#dark header h2,
+body#dark header h3 {
+  color: var(--blue-text);
+}
+
+body#dark span.horizontal-line {
+  background-color: var(--blue-text);
+}
+
+/* light mode theme */
+body#light header h2,
+body#light header h3 {
+  color: var(--dark-grey-text);
+}
+
+body#light span.horizontal-line {
+  background-color: var(--dark-grey-text);
+}
