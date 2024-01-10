@@ -1,3 +1,8 @@
+header {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 h1 {
   font-size: 2rem;
 }
@@ -11,6 +16,45 @@ span.horizontal-line {
   margin: 1rem 0;
   width: 100%;
   height: 1px;
+}
+
+div.switch-area {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+p.toggle {
+  width: 68px;
+  height: 34px;
+  background-image: var(--toggle-gradient);
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+p.toggle:active,
+p.toggle:hover {
+  background-image: var(--toggle-gradient);
+}
+
+span.white-switch {
+  display: block;
+  width: 28px;
+  height: 28px;
+  position: relative;
+  top: 3px;
+  left: 4px;
+  background-color: white;
+  border-radius: 100px;
+  transition: left 0.3s ease-in;
+}
+
+span.white-switch.move-right {
+  left: 36px;
+  right: 3px;
+  transition: left 0.3s linear;
 }
 
 /* dark mode theme */
@@ -31,4 +75,10 @@ body#light header h3 {
 
 body#light span.horizontal-line {
   background-color: var(--dark-grey-text);
+}
+
+p.toggle,
+p.toggle:active,
+p.toggle:hover {
+  background-color: var(--toggle-light);
 }
