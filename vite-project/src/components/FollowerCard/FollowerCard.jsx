@@ -1,12 +1,29 @@
 function FollowerCard(props) {
   const { type, handle, followers, numTrend } = props;
 
+  const alterDescription = (type) => {
+    if (type !== 'youtube') {
+      return 'followers';
+    } else {
+      return 'subscribers';
+    }
+  };
+
   return (
-    <div className='follower-card'>
-      <p className='title'>{type} - {handle}</p>
+    <div className={type}>
+      <p className='title'>
+        {type} - {handle}
+      </p>
       <p className='large-num'>{followers}</p>
-      <p className='description'>followers</p>
-      <p className="trend"><span className="up"></span> {numTrend}</p>
+      <p className='description'>{alterDescription(type)}</p>
+      <p className='trend'>
+        {numTrend >= 0 ? (
+          <span className='up'>up</span>
+        ) : (
+          <span className='down'>down</span>
+        )}
+        {numTrend}
+      </p>
     </div>
   );
 }
