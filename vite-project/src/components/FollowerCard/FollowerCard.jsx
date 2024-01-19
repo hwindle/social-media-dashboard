@@ -1,3 +1,5 @@
+import './FollowerCard.css';
+
 function FollowerCard(props) {
   const { type, handle, followers, numTrend } = props;
 
@@ -12,7 +14,8 @@ function FollowerCard(props) {
   return (
     <div className={type}>
       <p className='title'>
-        {type} - {handle}
+        <span className={type}></span>
+        {handle}
       </p>
       <p className='large-num'>{followers}</p>
       <p className='description'>{alterDescription(type)}</p>

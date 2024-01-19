@@ -1,4 +1,5 @@
 import FollowerCard from '../../components/FollowerCard/FollowerCard';
+import './TopFollowers.css';
 
 function TopFollowers() {
   return (
