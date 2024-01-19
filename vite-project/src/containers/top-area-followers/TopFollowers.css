@@ -1,6 +1,11 @@
+section.top-followers {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
 section.top-followers > div {
   margin: 2rem 0;
-
 }
 
 @media screen and (min-width: 1000px) {

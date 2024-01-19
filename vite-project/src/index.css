@@ -46,4 +46,6 @@ body#dark {
   background-color: var(--very-dark-blue-bg);
 }
 
-
+main {
+  width: 100%;
+}

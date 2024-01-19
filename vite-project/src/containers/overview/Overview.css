@@ -1,0 +1,18 @@
+section.overview-area {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+section.overview-area > article {
+  margin: 0;
+}
+
+@media screen and (min-width: 1000px) {
+  section.overview-area {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 1.5rem; 
+  }
+}
