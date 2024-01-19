@@ -1,4 +1,4 @@
-import ToggleSwitch from '../../components/ToggleSwitch';
+import ToggleSwitch from '../../components/ToggleSwitch/ToggleSwitch';
 import './Header.css';
 
 function Header({ totalFollowers }) {
