@@ -41,8 +41,8 @@ body#light span.horizontal-line {
   background-color: var(--dark-grey-text);
 }
 
-p.toggle,
-p.toggle:active,
-p.toggle:hover {
+body#light p.toggle,
+body#light p.toggle:active,
+body#light p.toggle:hover {
   background-color: var(--toggle-light);
 }

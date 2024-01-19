@@ -9,13 +9,16 @@ div.switch-area {
 p.toggle {
   width: 68px;
   height: 34px;
-  background-image: var(--toggle-gradient);
   border-radius: 100px;
   cursor: pointer;
 }
 
-p.toggle:active,
-p.toggle:hover {
+body#dark p.toggle {
+  background-image: var(--toggle-gradient);
+}
+
+body#dark  p.toggle:active,
+body#dark  p.toggle:hover {
   background-image: var(--toggle-gradient);
 }
 
@@ -31,7 +34,7 @@ span.white-switch {
   transition: left 0.3s ease-in;
 }
 
-span.white-switch.move-right {
+p.toggle.move-right > span.white-switch {
   left: 36px;
   right: 3px;
   transition: left 0.3s linear;
