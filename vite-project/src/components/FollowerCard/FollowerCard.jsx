@@ -21,11 +21,11 @@ function FollowerCard(props) {
       <p className='description'>{alterDescription(type)}</p>
       <p className='trend'>
         {numTrend >= 0 ? (
-          <span className='up'>up</span>
+          <span className='up'></span>
         ) : (
-          <span className='down'>down</span>
+          <span className='down'></span>
         )}
-        {numTrend}
+        <span>{Math.abs(parseInt(numTrend))} Today</span>
       </p>
     </div>
   );

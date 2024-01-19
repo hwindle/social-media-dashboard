@@ -8,7 +8,7 @@ function TopFollowers() {
         numTrend='12' />
       <FollowerCard type='twitter' handle='@nathanf' followers='1044' 
         numTrend='99' />
-      <FollowerCard type='instagram' handle='@realnathanf' followers='11000' 
+      <FollowerCard type='instagram' handle='@realnathanf' followers='11k' 
         numTrend='1099' />
       <FollowerCard type='youtube' handle='Nathan F.' followers='8239' 
         numTrend='-144' />
