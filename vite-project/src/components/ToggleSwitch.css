@@ -4,6 +4,13 @@ div.switch-area {
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
+}
+
+p.toggle,
+p.toggle:active,
+p.toggle:hover {
+  background-color: var(--toggle-light);
 }
 
 p.toggle {
@@ -12,13 +19,13 @@ p.toggle {
   border-radius: 100px;
   cursor: pointer;
 }
-
+/* 
 body#dark p.toggle {
   background-image: var(--toggle-gradient);
-}
+} */
 
-body#dark  p.toggle:active,
-body#dark  p.toggle:hover {
+p.toggle:active,
+p.toggle:hover {
   background-image: var(--toggle-gradient);
 }
 

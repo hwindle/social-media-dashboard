@@ -18,9 +18,6 @@ span.horizontal-line {
   height: 1px;
 }
 
-
-
-
 /* dark mode theme */
 body#dark header h2,
 body#dark header h3 {
@@ -41,8 +38,19 @@ body#light span.horizontal-line {
   background-color: var(--dark-grey-text);
 }
 
-body#light p.toggle,
-body#light p.toggle:active,
-body#light p.toggle:hover {
-  background-color: var(--toggle-light);
+/* tablet, desktop */
+@media screen and (min-width: 1000px) {
+  span.horizontal-line {
+    display: none;
+  }
+
+  header {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
 }

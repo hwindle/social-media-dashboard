@@ -8,10 +8,10 @@ function ToggleSwitch() {
     let currentTheme = document.getElementsByTagName('body')[0];
     console.log(currentTheme.id);
     if (currentTheme.id === 'dark') {
-      setActiveClass('toggle');
+      setActiveClass('toggle  move-right');
       currentTheme.id = 'light';
     } else if (currentTheme.id === 'light') {
-      setActiveClass('toggle move-right');
+      setActiveClass('toggle');
       currentTheme.id = 'dark';
       console.log('currentTheme element: ', currentTheme.id);
     }
