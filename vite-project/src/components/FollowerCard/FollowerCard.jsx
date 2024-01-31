@@ -1,7 +1,7 @@
 import './FollowerCard.css';
 
 function FollowerCard(props) {
-  const { type, handle, followers, numTrend } = props;
+  const { type, handle, followers, trend } = props.data;
 
   const alterDescription = (type) => {
     if (type !== 'youtube') {
@@ -20,12 +20,16 @@ function FollowerCard(props) {
       <p className='large-num'>{followers}</p>
       <p className='description'>{alterDescription(type)}</p>
       <p className='trend'>
-        {numTrend >= 0 ? (
+        {trend >= 0 ? (
           <span className='up'></span>
         ) : (
           <span className='down'></span>
         )}
-        <span>{Math.abs(parseInt(numTrend))} Today</span>
+        <span>
+          { parseInt(trend) <= 0 ? ' - ' : ' ' }
+          {Math.abs(parseInt(trend))}
+          &nbsp; Today
+        </span>
       </p>
     </div>
   );

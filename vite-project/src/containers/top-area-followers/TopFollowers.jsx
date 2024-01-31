@@ -1,17 +1,25 @@
 import FollowerCard from '../../components/FollowerCard/FollowerCard';
 import './TopFollowers.css';
+import { useQuery } from '@tanstack/react-query';
 
 function TopFollowers() {
+  const { isLoading, error, data } = useQuery({
+    queryKey: ['followersData'],
+    queryFn: () =>
+      fetch('http://localhost:3001/topfollowers').then((res) =>
+        res.json()
+      )
+  })
+
+  if (isLoading) return 'Loading...';
+
+  if (error) return 'An error has occurred: ' + error.message;
+
   return (
     <section className='top-followers'>
-      <FollowerCard type='facebook' handle='@nathanf' followers='1987' 
-        numTrend='12' />
-      <FollowerCard type='twitter' handle='@nathanf' followers='1044' 
-        numTrend='99' />
-      <FollowerCard type='instagram' handle='@realnathanf' followers='11k' 
-        numTrend='1099' />
-      <FollowerCard type='youtube' handle='Nathan F.' followers='8239' 
-        numTrend='-144' />
+      {data?.map((row, index) => {
+        return <FollowerCard data={row} key={index} />;
+      })}       
     </section>
   );
 }

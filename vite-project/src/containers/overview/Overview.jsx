@@ -4,7 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 
 function Overview() {
   const { isLoading, error, data } = useQuery({
-    queryKey: ['data'],
+    queryKey: ['overviewData'],
     queryFn: () =>
       fetch('http://localhost:3001/overview').then((res) =>
         res.json()
