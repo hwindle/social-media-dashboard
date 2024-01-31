@@ -1,7 +1,7 @@
 import './OverviewCard.css';
 
 function OverviewCard(props) {
-  const { type, title, number, percentage } = props;
+  const { type, title, number, percentage } = props.data;
 
   return (
     <article>
